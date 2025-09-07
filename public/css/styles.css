@@ -452,3 +452,241 @@ footer .copyright {
     box-shadow: none !important;
   }
 }
+
+/******* Assignment Specific Styles ***************/
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.hero-image {
+  max-width: 100%;
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px -12px rgb(0 0 0 / 0.25);
+}
+
+/* Featured Vehicles Section */
+.featured-vehicles {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.featured-vehicles h2 {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.vehicles-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.vehicle-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.vehicle-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.vehicle-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.vehicle-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Upgrades Section */
+.upgrades {
+  margin-bottom: 3rem;
+}
+
+.upgrades h2 {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.upgrades-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.upgrade-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.upgrade-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.upgrade-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.upgrade-item a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.upgrade-item a:hover {
+  color: var(--primary-dark);
+}
+
+/* Reviews Section */
+.reviews {
+  margin-bottom: 3rem;
+}
+
+.reviews h2 {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.reviews-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+}
+
+.reviews-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.reviews-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Responsive Design for Assignment Layout */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-content {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .hero-image {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .upgrades-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+  }
+
+  .upgrade-item img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    max-width: var(--container-max-width);
+  }
+}
